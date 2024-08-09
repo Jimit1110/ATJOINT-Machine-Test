@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Test Form</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <form id="machineTestForm">
+            <div class="form-group">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="userPhoto">Photo:</label>
+                <input type="file" id="userPhoto" name="userPhoto" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="userRank">Rank:</label>
+                <select id="userRank" name="userRank" required>
+                    <option value="First Rank">First Rank</option>
+                    <option value="Second Rank">Second Rank</option>
+                    <option value="Third Rank">Third Rank</option>
+                </select>
+            </div>
+            <input type="hidden" id="userId" name="userId">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="output" class="output-container">
+        <div class="user-info">
+            <p>ID: <span id="displayId"></span></p>
+            <p><span class="bold-label">User Name:</span> <span id="displayName" class="bold-label"></span></p>
+        </div>
+        <div class="user-photo" id="photoContainer">User Photo</div>
+        <p class="output-text">
+            Congratulations!! <strong>You have secured</strong> 
+            <span class="output-rank" id="displayRank"></span>
+        </p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
